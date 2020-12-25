@@ -26,7 +26,7 @@ module.exports = {
       colorAccentDark: "var(--dark-color-accent)"
     },
     extend: {
-      borderWidth: ['hover', 'focus'],
+      borderWidth: ['hover'],
     }
   },
   variants: {},
