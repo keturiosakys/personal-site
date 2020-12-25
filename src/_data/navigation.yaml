@@ -1,0 +1,6 @@
+---
+items:
+  - text: About me
+    url: "/"
+  - text: Notes
+    url: "/notes"
