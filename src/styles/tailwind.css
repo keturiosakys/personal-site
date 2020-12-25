@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Theme variables */
+
+:root {
+
+  --background-theme: #fff;
+  --background-blog-entry: #fff;
+  --color-primary: rgba(0, 0, 0, 0.88);
+  --color-secondary: rgba(0, 0, 0, 0.56);
+  --color-tertiary: rgba(0, 0, 0, 0.16);
+  --color-content: rgba(0, 0, 0, 0.88);
+  --color-accent: rgba(51,102,51);
+  /* dark theme */
+  --dark-background-theme: #1d1e20;
+  --dark-background-entry: #2e2e33;
+  --dark-color-primary: rgba(255, 255, 255, 0.84);
+  --dark-color-secondary: rgba(255, 255, 255, 0.56);
+  --dark-color-tertiary: rgba(255, 255, 255, 0.16);
+  --dark-color-content: rgba(255, 255, 255, 0.64);
+  --dark-color-accent: rgba(102,153,102);
+}
+
+/* Custom CSS */
+
+
+#menu .active {
+  @apply font-medium border-b-2 border-solid border-contentColor;
+}
