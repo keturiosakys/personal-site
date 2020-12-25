@@ -13,6 +13,10 @@ module.exports = function (eleventyConfig) {
     "./node_modules/alpinejs/dist/alpine.js": "./js/alpine.js"
   });
 
+  eleventyConfig.addLayoutAlias(
+    "default", "default.html"
+    );
+
   //Syntax highlighting for code blocks
   eleventyConfig.addPlugin(syntaxHighlight);
 

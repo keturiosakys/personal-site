@@ -1,16 +1,22 @@
-<header id="header" class="box-border block max-w-5xl mx-auto">
-    <nav class="relative flex items-center justify-center h-16">
-        {% if navigation.items %}
-            <ul id="menu" class="flex justify-between space-x-6" onscroll="menu_on_scroll()">
-                {% for item in navigation.items %}
-                    <li>
-                        <a href="{{ item.url }}" class="hover:border-b-2 hover:border-current hover:border-solid">
-                        <span>{{ item.text }}</span>
-                        </a>
-                    </li>
-                {% endfor %}
-            </ul>
-        {% endif %}
-    </nav>
-
+<header id="header" class="block max-w-5xl mx-auto">
+  <nav class="relative flex items-center justify-center h-16">
+    {% if navigation.items %}
+    <ul
+      id="menu"
+      class="flex justify-between space-x-6"
+      onscroll="menu_on_scroll()"
+    >
+      {% for item in navigation.items %}
+      <li>
+        <a
+          href="{{ item.url }}"
+          class="{% if id == item.text %}active{% endif %}"
+        >
+          <span>{{ item.text }}</span>
+        </a>
+      </li>
+      {% endfor %}
+    </ul>
+    {% endif %}
+  </nav>
 </header>
