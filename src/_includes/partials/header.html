@@ -11,9 +11,8 @@
       <li class="">
         <a
           href="{{ item.url }}"
-          class="{% if id == item.text %}active{% endif %} hover:text-colorAccent dark:hover:text-colorAccentDark" 
-        > 
-        {# TODO: figure out hovering with border element #}
+          class="{% if id == item.text %} active {% endif %} {% if id != item.text %} hover:text-colorAccent dark:hover:text-colorAccentDark {% endif %}"
+        >
           <span>{{ item.text }}</span>
         </a>
       </li>

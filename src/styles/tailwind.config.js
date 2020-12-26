@@ -11,7 +11,7 @@ module.exports = {
       theme: "var(--background-theme)",
       blogEntry: "var(--background-blog-entry)",
       themeDark: "var(--dark-background-theme)",
-      blogEntryDark: "var(--dark-background-blog-entry)",
+      blogEntryDark: "var(--dark-background-entry)",
 
       primary: "var(--color-primary)",
       secondary: "var(--color-secondary)",

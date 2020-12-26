@@ -23,6 +23,12 @@ module.exports = function (eleventyConfig) {
     yaml.safeLoad(contents)
   );
 
+  // Convert to human readable date
+  eleventyConfig.addFilter("readableDate", (dateObj) => {
+    return DateTime.fromJSDate(dateObj, { zone: "utc" }).toFormat(
+      "dd LLL yyyy"
+    );
+  });
   eleventyConfig.addShortcode("version", function () {
     return String(Date.now());
   });

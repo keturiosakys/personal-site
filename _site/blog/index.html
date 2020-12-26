@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Notes</title>
+    <title>Posts</title>
     <meta charset="UTF-8" />
     <meta http-equiv="x-ua-compatible" content="ie=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -11,13 +11,12 @@
       name="viewport"
       content="width=device-width, initial-scale=1, shrink-to-fit=no, viewport-fit=cover"
     />
-    <link rel="stylesheet" href="/style.css?v=1608927693852" />
+    <link rel="stylesheet" href="/style.css?v=1609020125017" />
     
   </head>
-  <body class="bg-theme dark:bg-themeDark">
+  <body class="bg-theme dark:bg-themeDark text-contentColor dark:text-contentColorDark">
     
-
-    <header id="header" class="block max-w-5xl mx-auto">
+    <header id="header" class="block max-w-2xl mx-auto">
   <nav class="relative flex items-center justify-center h-16">
     
     <ul
@@ -25,22 +24,25 @@
       class="flex justify-between space-x-6"
       onscroll="menu_on_scroll()"
     >
+    
       
-      <li>
+      <li class="">
         <a
           href="/"
-          class="hover:border-b-2 hover:border-current hover:border-solid "
-        >
+          class=" hover:text-colorAccent dark:hover:text-colorAccentDark" 
+        > 
+        
           <span>About me</span>
         </a>
       </li>
       
-      <li>
+      <li class="">
         <a
-          href="/notes"
-          class="hover:border-b-2 hover:border-current hover:border-solid active"
-        >
-          <span>Notes</span>
+          href="/posts"
+          class="active hover:text-colorAccent dark:hover:text-colorAccentDark" 
+        > 
+        
+          <span>Posts</span>
         </a>
       </li>
       
@@ -49,11 +51,23 @@
   </nav>
 </header>
 
-    
-    
 
     
-    <script src="/js/alpine.js?v=1608927693853"></script>
+    <main>
+  <div class="box-border w-9/12 max-w-2xl mx-auto pt-14 pb-14">
+
+    
+<div class="justify-left">
+  <h1>Posts</h1>
+  <p>I'm writing about my recent interests, weird obsessions, and other side project updates.</p>
+</div>
+
+
+  </div>
+</main>
+
+    
+    <script src="/js/alpine.js?v=1609020125017"></script>
     <script>
 window.onload = function () {
   if (localStorage.getItem("menu-scroll-position")) {
@@ -89,6 +103,6 @@ function menu_on_scroll() {
     document.getElementById("menu").scrollLeft
   );
 }
-</script>
+</script>  
   </body>
 </html>
