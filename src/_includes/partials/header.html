@@ -1,4 +1,4 @@
-<header id="header" class="block max-w-5xl mx-auto">
+<header id="header" class="block max-w-2xl mx-auto">
   <nav class="relative flex items-center justify-center h-16">
     {% if navigation.items %}
     <ul
@@ -6,12 +6,14 @@
       class="flex justify-between space-x-6"
       onscroll="menu_on_scroll()"
     >
+    {# TODO: check if I need menu_on_scroll here #}
       {% for item in navigation.items %}
-      <li>
+      <li class="">
         <a
           href="{{ item.url }}"
-          class="{% if id == item.text %}active{% endif %}"
-        >
+          class="{% if id == item.text %}active{% endif %} hover:text-colorAccent dark:hover:text-colorAccentDark" 
+        > 
+        {# TODO: figure out hovering with border element #}
           <span>{{ item.text }}</span>
         </a>
       </li>
