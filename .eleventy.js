@@ -4,17 +4,35 @@ const { DateTime } = require("luxon");
 const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 
 module.exports = function (eleventyConfig) {
+
+  let markdownIt = require("markdown-it");
+  let options = {
+    html: true,
+    breaks: true,
+    linkify: true,
+  };
+
+  eleventyConfig.setLibrary("md", markdownIt(options));
+
+
   eleventyConfig.setUseGitIgnore(false);
 
-  eleventyConfig.addWatchTarget("./_tmp/static/css/style.css");
+  eleventyConfig.addWatchTarget("./_tmp/style.css");
 
   eleventyConfig.addPassthroughCopy({
-    "./_tmp/style.css": "./style.css",
+    "./src/styles/prism-nord.css": "./css/prism-nord.css",
+  });
+
+  eleventyConfig.addPassthroughCopy({ "./_tmp/style.css": "./css/style.css" });
+
+  eleventyConfig.addPassthroughCopy({
     "./node_modules/alpinejs/dist/alpine.js": "./js/alpine.js",
   });
 
+  //easy layout references (without the .html append)
   eleventyConfig.addLayoutAlias("default", "default.html");
   eleventyConfig.addLayoutAlias("blog", "blog.html");
+  eleventyConfig.addLayoutAlias("post", "post.html");
 
   //Syntax highlighting for code blocks
   eleventyConfig.addPlugin(syntaxHighlight);
@@ -33,6 +51,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addShortcode("version", function () {
     return String(Date.now());
   });
+
 
   eleventyConfig.addTransform("htmlmin", function (content, outputPath) {
     if (

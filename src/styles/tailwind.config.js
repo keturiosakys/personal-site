@@ -25,10 +25,10 @@ module.exports = {
       contentColorDark: "var(--dark-color-content)",
       colorAccentDark: "var(--dark-color-accent)"
     },
-    extend: {
-      borderWidth: ['hover'],
-    }
+    extend: {}
   },
   variants: {},
-  plugins: [],
+  plugins: [
+
+  ],
 };

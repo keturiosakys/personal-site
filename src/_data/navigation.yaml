@@ -1,6 +1,6 @@
 ---
 items:
-  - text: About me
+  - text: About
     url: "/"
   - text: Posts
     url: "/posts"

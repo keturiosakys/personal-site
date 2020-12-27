@@ -1,4 +1,5 @@
 <script>
+{/* TODO check-in and clean up the custom js scripts */}
 window.onload = function () {
   if (localStorage.getItem("menu-scroll-position")) {
     document.getElementById("menu").scrollLeft = localStorage.getItem(

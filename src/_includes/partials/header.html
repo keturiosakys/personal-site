@@ -1,12 +1,10 @@
-<header id="header" class="block max-w-2xl mx-auto">
-  <nav class="relative flex items-center justify-center h-16">
+<header id="header" class="z-10 flex items-center justify-between w-full h-16 max-w-5xl pl-8 pr-8 mx-auto bg-transparent">
+    <div class="flex pr-6 font-bold hover:text-colorAccent dark:hover:text-colorAccentDark"> <a href="/">Laurynas Keturakis</a></div>
     {% if navigation.items %}
     <ul
       id="menu"
-      class="flex justify-between space-x-6"
-      onscroll="menu_on_scroll()"
+      class="flex justify-end space-x-6"
     >
-    {# TODO: check if I need menu_on_scroll here #}
       {% for item in navigation.items %}
       <li class="">
         <a
@@ -19,5 +17,4 @@
       {% endfor %}
     </ul>
     {% endif %}
-  </nav>
 </header>

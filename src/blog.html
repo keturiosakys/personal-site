@@ -7,7 +7,7 @@ id: Posts
 {# Hero object #}
 <div id="page-header" class="mb-12 justify-left">
   <h1 class="mb-6">{{title}}</h1>
-  <p>I'm writing about my recent interests, and odd obsessions. I will also put any side project updates here.</p>
+  <p class="text-secondary dark:text-secondaryDark">I'm writing about my recent interests, and odd obsessions. I will also put any side project updates here.</p>
 </div>
 
 {# Article list #}
@@ -16,7 +16,7 @@ id: Posts
   <a id="article-link" href="{{ post.url | url }}">
     <div id="article" class="relative block rounded-md cursor-pointer p-7 mb-7 bg-blogEntry dark:bg-blogEntryDark">
       <div id="article-title" class="mb-2"><h2>{{ post.data.title }}</h2></div>
-      <div id="article-description" class="mb-2">{{ post.data.description }}</div>
+      <div id="article-description" class="mb-2 text-secondary dark:text-secondaryDark">{{ post.data.description }}</div>
       <div id="article-date">{{ post.date | readableDate }}</div>
     </div>
   </a>

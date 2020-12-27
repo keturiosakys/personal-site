@@ -13,18 +13,21 @@
       name="viewport"
       content="width=device-width, initial-scale=1, shrink-to-fit=no, viewport-fit=cover"
     />
-    <link rel="stylesheet" href="/style.css?v={% version %}" />
+    <link href="/css/prism-nord.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css?v={% version %}" />
     {% block head %}{% endblock %}
   </head>
-  <body class="bg-theme dark:bg-themeDark text-contentColor dark:text-contentColorDark">
-    {# Add header element #}
-    {% include "./partials/header.html"%}
+  <body class="h-screen bg-theme dark:bg-themeDark">
+    <div class="text-contentColor dark:text-contentColorDark">
+      {# Add header element #}
+      {% include "./partials/header.html"%}
 
-    {# Add content #}
-    {{ content | safe }}
+      {# Add content #}
+      {{ content | safe }}
 
-    {# Add scripts #}
-    <script src="/js/alpine.js?v={% version %}"></script>
-    {% include "./js/site-tweaks.js" %}  {# TODO check-in and clean up the custom js scripts#}
+      {# Add scripts #}
+      <script src="/js/alpine.js?v={% version %}"></script>
+      {# {% include "./js/site-tweaks.js" %} #}
+    </div>
   </body>
 </html>

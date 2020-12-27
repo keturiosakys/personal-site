@@ -11,27 +11,27 @@
       name="viewport"
       content="width=device-width, initial-scale=1, shrink-to-fit=no, viewport-fit=cover"
     />
-    <link rel="stylesheet" href="/style.css?v=1609028655226" />
+    <link href="/css/prism-nord.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css?v=1609107457734" />
     
   </head>
-  <body class="bg-theme dark:bg-themeDark text-contentColor dark:text-contentColorDark">
-    
-    <header id="header" class="block max-w-2xl mx-auto">
-  <nav class="relative flex items-center justify-center h-16">
+  <body class="h-screen bg-theme dark:bg-themeDark">
+    <div class="text-contentColor dark:text-contentColorDark">
+      
+      <header id="header" class="z-10 flex items-center justify-between w-full h-16 max-w-5xl pl-8 pr-8 mx-auto bg-transparent">
+    <div class="flex pr-6 font-bold hover:text-colorAccent dark:hover:text-colorAccentDark"> <a href="/">Laurynas Keturakis</a></div>
     
     <ul
       id="menu"
-      class="flex justify-between space-x-6"
-      onscroll="menu_on_scroll()"
+      class="flex justify-end space-x-6"
     >
-    
       
       <li class="">
         <a
           href="/"
           class=" active  "
         >
-          <span>About me</span>
+          <span>About</span>
         </a>
       </li>
       
@@ -46,19 +46,18 @@
       
     </ul>
     
-  </nav>
 </header>
 
 
-    
-    
+      
+      
 <main>
-  <div class="box-border relative flex w-9/12 max-w-2xl mx-auto pt-14 pb-14">
+  <div class="box-border relative flex w-10/12 max-w-xl mx-auto pt-14 pb-14">
     <div class="justify-left">
       <h1 class="mb-6">Hey 👋,</h1>
       
-      <p>Urna donec vulputate sagittis ultricies tristique porta inceptos cras curae dolor metus hendrerit consectetur sit.</p>
-      <p>Currently I'm a Product Owner @ TNW, helping bring</p>
+      <p class="text-secondary dark:text-secondaryDark">Urna donec vulputate sagittis ultricies tristique porta inceptos cras curae dolor metus hendrerit consectetur sit.</p>
+      <p class="text-secondary dark:text-secondaryDark">Currently I'm a Product Owner @ TNW, helping bring</p>
       <ul class="inline-flex mt-2 space-x-6">
         
         
@@ -87,43 +86,9 @@
 
 </main>
 
-    
-    <script src="/js/alpine.js?v=1609028655241"></script>
-    <script>
-window.onload = function () {
-  if (localStorage.getItem("menu-scroll-position")) {
-    document.getElementById("menu").scrollLeft = localStorage.getItem(
-      "menu-scroll-position"
-    );
-  }
-};
-document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
-  anchor.addEventListener("click", function (e) {
-    e.preventDefault();
-    document
-      .querySelector(this.getAttribute("href"))
-      .scrollIntoView({ behavior: "smooth" });
-  });
-});
-var mybutton = document.getElementById("top-link");
-window.onscroll = function () {
-  if (
-    document.body.scrollTop > 800 ||
-    document.documentElement.scrollTop > 800
-  ) {
-    mybutton.style.visibility = "visible";
-    mybutton.style.opacity = "1";
-  } else {
-    mybutton.style.visibility = "hidden";
-    mybutton.style.opacity = "0";
-  }
-};
-function menu_on_scroll() {
-  localStorage.setItem(
-    "menu-scroll-position",
-    document.getElementById("menu").scrollLeft
-  );
-}
-</script>  
+      
+      <script src="/js/alpine.js?v=1609107457735"></script>
+      
+    </div>
   </body>
 </html>

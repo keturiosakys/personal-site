@@ -6,7 +6,7 @@
 
 :root {
 
-  --background-theme: #fff;
+  --background-theme: #f5f5f5;
   --background-blog-entry: #fff;
   --color-primary: rgba(0, 0, 0, 0.88);
   --color-secondary: rgba(0, 0, 0, 0.56);
@@ -14,8 +14,8 @@
   --color-content: rgba(0, 0, 0, 0.88);
   --color-accent: rgba(51,102,51);
   /* dark theme */
-  --dark-background-theme: #1d1e20;
-  --dark-background-entry: #2e2e33;
+  --dark-background-theme: #282A2E;
+  --dark-background-entry: #40444a;
   --dark-color-primary: rgba(255, 255, 255, 0.84);
   --dark-color-secondary: rgba(255, 255, 255, 0.56);
   --dark-color-tertiary: rgba(255, 255, 255, 0.16);
@@ -25,23 +25,83 @@
 
 /* Custom CSS */
 
+@layer base {
+  h1 {
+    @apply text-3xl font-bold lg:text-4xl;
+  }
 
-#menu .active {
-  @apply pb-1.5 font-bold border-b-2 border-solid border-contentColor dark:border-contentColorDark;
+  h2 {
+    @apply text-2xl font-bold text-left lg:text-3xl;
+  }
+
+  h3 {
+    @apply text-lg font-bold lg:text-xl;
+  }
+
+  p {
+    @apply mb-4;
+  }
+
+  html {
+      overflow: hidden;
+      height: 100%;
+  }
+
+  body {
+      overflow: auto;
+  }
+
+  /* Blog post CSS */
+
+  article h1 {
+    @apply mb-6 text-2xl font-bold lg:text-3xl;
+  }
+
+  article h2 {
+    @apply mb-4 text-xl font-bold text-left lg:text-2xl;
+  }
+
+  article h3 {
+    @apply mb-4;
+  }
+
+  article h4 {
+    @apply mb-4 font-bold;
+  }
+
+  article ul {
+    @apply mb-4 list-disc;
+  }
+
+  article ol {
+    @apply mb-4 list-decimal;
+  }
+
+  article a {
+    @apply text-colorAccent dark:text-colorAccentDark;
+  }
+
+  article a:hover {
+    @apply underline;
+  }
+
+  article a:visited {
+    @apply text-tertiary dark:text-tertiaryDark;
+  }
+
+  article blockquote {
+    @apply px-6 my-6 italic text-secondary dark:text-secondaryDark;
+  }
+
+  article hr {
+    @apply mb-4 border-t-2 border-secondary dark:border-secondaryDark;
+  }
+
 }
 
-h1 {
-  @apply text-3xl font-bold lg:text-4xl;
-}
+@layer utilities {
+  #menu > .active {
+    @apply pb-1.5 font-bold border-b-2 border-solid border-contentColor dark:border-contentColorDark;
+  }
 
-h2 {
-  @apply text-xl font-bold text-left lg:text-2xl;
-}
-
-h3 {
-  @apply text-2xl font-bold;
-}
-
-p {
-  @apply mb-3
 }
