@@ -14,6 +14,7 @@ module.exports = function (eleventyConfig) {
   });
 
   eleventyConfig.addLayoutAlias("default", "default.html");
+  eleventyConfig.addLayoutAlias("blog", "blog.html");
 
   //Syntax highlighting for code blocks
   eleventyConfig.addPlugin(syntaxHighlight);
@@ -26,7 +27,7 @@ module.exports = function (eleventyConfig) {
   // Convert to human readable date
   eleventyConfig.addFilter("readableDate", (dateObj) => {
     return DateTime.fromJSDate(dateObj, { zone: "utc" }).toFormat(
-      "dd LLL yyyy"
+      "LLL dd, yyyy"
     );
   });
   eleventyConfig.addShortcode("version", function () {
