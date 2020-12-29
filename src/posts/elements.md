@@ -66,3 +66,9 @@ const htmlmin = require("html-minifier");
 const yaml = require("js-yaml");
 const { DateTime } = require("luxon");
 ```
+
+---
+
+## Images
+
+![Changing Stuff](/images/changing-stuff-and-seeing-what-happens.png)

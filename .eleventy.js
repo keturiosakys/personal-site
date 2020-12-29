@@ -19,6 +19,10 @@ module.exports = function (eleventyConfig) {
 
   eleventyConfig.addWatchTarget("./_tmp/style.css");
 
+  eleventyConfig.addPassthroughCopy("./images/*.png");
+  
+  eleventyConfig.addPassthroughCopy("./uploads/*");
+
   eleventyConfig.addPassthroughCopy({
     "./src/styles/prism-nord.css": "./css/prism-nord.css",
   });
