@@ -17,5 +17,7 @@
     "prettier": "2.2.1",
     "tailwindcss": "^2.0.2"
   },
-  "dependencies": {}
+  "dependencies": {
+    "markdown-it-implicit-figures": "^0.10.0"
+  }
 }

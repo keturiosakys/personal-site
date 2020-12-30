@@ -5,23 +5,32 @@ const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 
 module.exports = function (eleventyConfig) {
 
+  // markdown engine config
   let markdownIt = require("markdown-it");
+  let markdownItImplicitFigure = require("markdown-it-implicit-figures");
   let options = {
     html: true,
     breaks: true,
-    linkify: true,
+    linkify: true
   };
 
-  eleventyConfig.setLibrary("md", markdownIt(options));
+  let figureOptions = {
+    figcaption: true
+  }
 
+  const markdownEngine = markdownIt(options);
+  markdownEngine.use(markdownItImplicitFigure, figureOptions);
+  eleventyConfig.setLibrary("md", markdownEngine);
 
+  // .ignore settings
   eleventyConfig.setUseGitIgnore(false);
 
+  // rendering passthrough settings
   eleventyConfig.addWatchTarget("./_tmp/style.css");
 
-  eleventyConfig.addPassthroughCopy("./images/*.png");
-  
-  eleventyConfig.addPassthroughCopy("./uploads/*");
+  eleventyConfig.addPassthroughCopy("src/images");
+
+  eleventyConfig.addPassthroughCopy("src/uploads");
 
   eleventyConfig.addPassthroughCopy({
     "./src/styles/prism-nord.css": "./css/prism-nord.css",
@@ -56,7 +65,7 @@ module.exports = function (eleventyConfig) {
     return String(Date.now());
   });
 
-
+  // HTML minification
   eleventyConfig.addTransform("htmlmin", function (content, outputPath) {
     if (
       process.env.ELEVENTY_PRODUCTION &&
