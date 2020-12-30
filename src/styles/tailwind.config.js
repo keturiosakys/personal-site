@@ -22,8 +22,10 @@ module.exports = {
 
       contentColor: "var(--color-content)",
       colorAccent: "var(--color-accent)",
+      colorMarker: "var(--color-marker)",
       contentColorDark: "var(--dark-color-content)",
-      colorAccentDark: "var(--dark-color-accent)"
+      colorAccentDark: "var(--dark-color-accent)",
+      colorMarkerDark: "var(--dark-color-marker)"
     },
     extend: {}
   },

@@ -8,6 +8,10 @@ module.exports = function (eleventyConfig) {
   // markdown engine config
   let markdownIt = require("markdown-it");
   let markdownItImplicitFigure = require("markdown-it-implicit-figures");
+  let markdownItFootnotes = require("@gerhobbelt/markdown-it-footnote");
+  let blockEmbedPlugin = require("markdown-it-block-embed");
+  let markdownBackticks = require("markdown-it-prism-backticks");
+
   let options = {
     html: true,
     breaks: true,
@@ -20,6 +24,9 @@ module.exports = function (eleventyConfig) {
 
   const markdownEngine = markdownIt(options);
   markdownEngine.use(markdownItImplicitFigure, figureOptions);
+  markdownEngine.use(markdownItFootnotes);
+  markdownEngine.use(blockEmbedPlugin);
+  markdownEngine.use(markdownBackticks);
   eleventyConfig.setLibrary("md", markdownEngine);
 
   // .ignore settings

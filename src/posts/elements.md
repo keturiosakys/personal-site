@@ -71,4 +71,6 @@ const { DateTime } = require("luxon");
 
 ## Images
 
-![Changing Stuff](/images/changing-stuff-and-seeing-what-happens.png)
+![Changing Stuff](/images/changing-stuff-and-seeing-what-happens.png "checking on the text")
+
+Est fames netus nascetur nostra fermentum scelerisque torquent condimentum tellus dictumst aliquam tincidunt viverra in, risus iaculis ut primis tempus dis dui quisque suspendisse ipsum leo aenean. Dis ad felis nulla erat velit libero dignissim inceptos, vivamus platea gravida turpis himenaeos auctor suspendisse feugiat risus, suscipit per ullamcorper sapien vitae enim lorem. Feugiat scelerisque sem varius magna a nec senectus cras, risus est diam enim mattis eu tincidunt urna placerat, nibh orci posuere adipiscing eleifend praesent at. Libero faucibus feugiat at sed aptent molestie orci vulputate nunc cursus blandit, mollis justo ornare penatibus aliquet posuere accumsan fames suscipit nostra. Dictumst blandit viverra duis elementum mattis non leo placerat faucibus at, scelerisque a auctor pellentesque neque cursus dis donec lacus, felis morbi class eu volutpat pharetra potenti fermentum laoreet. Orci id natoque facilisis consectetur malesuada eu, varius risus non viverra. Dictum consectetur lacus est bibendum tempus nascetur ante sapien, elit pulvinar nullam sed posuere torquent tincidunt velit, eros augue interdum odio erat egestas vehicula.
