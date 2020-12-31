@@ -5,11 +5,12 @@ Ideas:
 
 Next release features:
 	- nested lists
+	- sitemap.xml
 
 Must-haves before live:
-	SEO basics:
-		- Facebook open graph support
-		- produce checklist
+Archive:
+	- Facebook open graph support @done
+	- produce checklist @done
 	- text highlight support (markup) @done
 		- colors already added @done
 		- figure out the markdown render @done
