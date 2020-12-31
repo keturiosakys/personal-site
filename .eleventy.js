@@ -16,7 +16,7 @@ module.exports = function (eleventyConfig) {
   let blockEmbedPlugin = require("markdown-it-block-embed");
   let markdownBackticks = require("markdown-it-prism-backticks");
   let markdownMark = require('markdown-it-mark');
-  let markdownAttribution
+  let markdownAttribution = require('markdown-it-attribution');
 
   let options = {
     html: true,
@@ -35,6 +35,17 @@ module.exports = function (eleventyConfig) {
   markdownEngine.use(markdownBackticks);
   markdownEngine.use(markdownMark);
   eleventyConfig.setLibrary("md", markdownEngine);
+
+  //favicon config
+
+  let env = process.env.ELEVENTY_ENV;
+
+  if (env === "prod") {
+      eleventyConfig.addPassthroughCopy({ "./src/_includes/favicon/prod": "/" });
+  }
+  else if (env === "dev") {
+      eleventyConfig.addPassthroughCopy({ "./src/_includes/favicon/dev": "/" });
+  }
 
   // .ignore settings
   eleventyConfig.setUseGitIgnore(false);
