@@ -1,0 +1,16 @@
+
+Ideas:
+	- sidenotes instead (along?) with footnotes with popup rendering on phones
+	- internal wiki links with pre-rendered hover / better integration with Craft docs
+
+Next release features:
+	- nested lists
+
+Must-haves before live:
+	SEO basics:
+		- Facebook open graph support
+		- produce checklist
+	- text highlight support (markup) @done
+		- colors already added @done
+		- figure out the markdown render @done
+	- image support @done(20-12-30 03:16)

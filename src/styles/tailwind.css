@@ -12,7 +12,7 @@
   --color-secondary: rgba(0, 0, 0, 0.56);
   --color-tertiary: rgba(0, 0, 0, 0.16);
   --color-content: rgba(0, 0, 0, 0.88);
-  --color-accent: rgba(51,102,51);
+  --color-accent: #336633;
   --color-marker: #FFCC66CC;
   /* dark theme */
   --dark-background-theme: #282A2E;
@@ -98,7 +98,7 @@
   article hr {
     @apply mb-4 border-t-2 border-secondary dark:border-secondaryDark;
   }
-  
+
   article img {
     @apply max-w-full rounded;
   }
@@ -107,10 +107,18 @@
     @apply mt-1 mb-4 text-base font-bold;
   }
 
+  article mark {
+    @apply bg-colorMarker dark:bg-colorMarkerDark text-contentColor dark:text-contentColorDark;
+  }
+
+  article .embed {
+    @apply mb-4;
+  }
+
 }
 
 @layer utilities {
-  #menu > .active {
+  .active {
     @apply pb-1.5 font-bold border-b-2 border-solid border-contentColor dark:border-contentColorDark;
   }
 

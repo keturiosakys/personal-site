@@ -2,6 +2,10 @@ const htmlmin = require("html-minifier");
 const yaml = require("js-yaml");
 const { DateTime } = require("luxon");
 const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
+const embedTwitter = require("eleventy-plugin-embed-twitter");
+const embedYouTube = require('eleventy-plugin-youtube-embed');
+const embedSoundCloud = require("eleventy-plugin-embed-soundcloud");
+const pluginSEO = require("eleventy-plugin-seo");
 
 module.exports = function (eleventyConfig) {
 
@@ -11,6 +15,8 @@ module.exports = function (eleventyConfig) {
   let markdownItFootnotes = require("@gerhobbelt/markdown-it-footnote");
   let blockEmbedPlugin = require("markdown-it-block-embed");
   let markdownBackticks = require("markdown-it-prism-backticks");
+  let markdownMark = require('markdown-it-mark');
+  let markdownAttribution
 
   let options = {
     html: true,
@@ -27,6 +33,7 @@ module.exports = function (eleventyConfig) {
   markdownEngine.use(markdownItFootnotes);
   markdownEngine.use(blockEmbedPlugin);
   markdownEngine.use(markdownBackticks);
+  markdownEngine.use(markdownMark);
   eleventyConfig.setLibrary("md", markdownEngine);
 
   // .ignore settings
@@ -56,6 +63,20 @@ module.exports = function (eleventyConfig) {
 
   //Syntax highlighting for code blocks
   eleventyConfig.addPlugin(syntaxHighlight);
+
+  //SEO
+  eleventyConfig.addPlugin(pluginSEO, require("./src/_data/seo.json"));
+
+  // Embeds
+  eleventyConfig.addPlugin(embedTwitter);
+  eleventyConfig.addPlugin(embedYouTube, {
+          lite: true,
+          embedClass: 'embed youtube'
+      });
+  eleventyConfig.addPlugin(embedSoundCloud, {
+          small: true,
+          embedClass: 'embed soundcloud'
+  });
 
   //Support for YAML in _data
   eleventyConfig.addDataExtension("yaml", (contents) =>
