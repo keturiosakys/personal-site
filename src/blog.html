@@ -12,12 +12,14 @@ id: Posts
 
 {# Article list #}
 
-{% for post in collections.publish | reverse %} {#for loop to iterate through the collection creating items for each#}
-  <a id="article-link" href="{{ post.url | url }}">
-    <div id="article" class="relative block rounded-md cursor-pointer p-7 mb-7 bg-blogEntry dark:bg-blogEntryDark">
-      <div id="article-title" class="mb-2"><h2>{{ post.data.title }}</h2></div>
-      <div id="article-description" class="mb-2 text-secondary dark:text-secondaryDark">{{ post.data.description }}</div>
-      <div id="article-date">{{ post.date | readableDate }}</div>
-    </div>
-  </a>
-{% endfor %}
+<div id="article-list">
+	{% for post in collections.publish | reverse %} {#for loop to iterate through the collection creating items for each#}
+	  <a id="article-link" href="{{ post.url | url }}">
+	    <div id="article" class="relative block rounded-md cursor-pointer p-7 mb-7 bg-blogEntry dark:bg-blogEntryDark">
+	      <div id="article-title" class="mb-2"><h2>{{ post.data.title }}</h2></div>
+	      <div id="article-description" class="mb-2 text-secondary dark:text-secondaryDark">{{ post.data.description }}</div>
+	      <div id="article-date">{{ post.date | readableDate }}</div>
+	    </div>
+	  </a>
+	{% endfor %}
+</div>

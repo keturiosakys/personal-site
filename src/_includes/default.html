@@ -1,35 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>{{title}}</title>
-    <meta charset="UTF-8" />
-    <meta http-equiv="x-ua-compatible" content="ie=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    {% if description %}
-    <meta name="description" content="{{description}}" />
-    {% endif %}
-    <meta http-equiv="x-ua-compatible" content="ie=edge" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no, viewport-fit=cover"
-    />
-    <link href="/css/prism-nord.css" rel="stylesheet">
-    <link rel="stylesheet" href="/css/style.css?v={% version %}" />
-    {% block head %}{% endblock %}
+    {% include "./partials/head.html"%}
   </head>
-  <body class="h-screen bg-theme dark:bg-themeDark">
-    <div class="text-contentColor dark:text-contentColorDark">
+  <body>
+    <div class="h-screen flex flex-col text-contentColor dark:text-contentColorDark bg-theme dark:bg-themeDark">
+
       {# Add header element #}
       {% include "./partials/header.html"%}
 
       {# Add content #}
       {{ content | safe }}
 
+      {# Add footer element #}
+      {% include "./partials/footer.html" %}
+
       {# Add scripts #}
       <script src="/js/alpine.js?v={% version %}"></script>
 
-      {# Add footer element #}
-      {% include "./partials/footer.html" %}
     </div>
   </body>
 </html>
