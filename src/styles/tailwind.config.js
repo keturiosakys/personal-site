@@ -12,7 +12,6 @@ module.exports = {
       blogEntry: "var(--background-blog-entry)",
       themeDark: "var(--dark-background-theme)",
       blogEntryDark: "var(--dark-background-entry)",
-
       primary: "var(--color-primary)",
       secondary: "var(--color-secondary)",
       tertiary: "var(--color-tertiary)",
@@ -22,6 +21,7 @@ module.exports = {
 
       contentColor: "var(--color-content)",
       colorAccent: "var(--color-accent)",
+
       colorMarker: "var(--color-marker)",
       contentColorDark: "var(--dark-color-content)",
       colorAccentDark: "var(--dark-color-accent)",

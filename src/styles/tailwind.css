@@ -121,5 +121,4 @@
   .active {
     @apply pb-1.5 font-bold border-b-2 border-solid border-contentColor dark:border-contentColorDark;
   }
-
 }

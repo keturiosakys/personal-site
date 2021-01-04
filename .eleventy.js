@@ -100,11 +100,14 @@ module.exports = function (eleventyConfig) {
       "LLL dd, yyyy"
     );
   });
+
   eleventyConfig.addShortcode("version", function () {
     return String(Date.now());
   });
 
+
   // HTML minification
+
   eleventyConfig.addTransform("htmlmin", function (content, outputPath) {
     if (
       process.env.ELEVENTY_PRODUCTION &&
