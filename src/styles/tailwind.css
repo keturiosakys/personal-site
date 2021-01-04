@@ -51,6 +51,12 @@
       overflow: auto;
   }
 
+  /* Hero CSS */
+
+  #page-hero h3 {
+    @apply mb-4;
+  }
+
   /* Blog post CSS */
 
   article h1 {
@@ -69,12 +75,16 @@
     @apply mb-4 font-bold;
   }
 
+  article p {
+    @apply leading-relaxed;
+  }
+
   article ul {
-    @apply mb-4 list-disc;
+    @apply mb-4 ml-16 list-disc;
   }
 
   article ol {
-    @apply mb-4 list-decimal;
+    @apply mb-4 ml-16 list-decimal;
   }
 
   article a {
