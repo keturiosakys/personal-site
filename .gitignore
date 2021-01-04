@@ -5,3 +5,6 @@ node_modules/
 package-lock.json
 .vscode
 .gitattributes
+TODO
+.prettierrc.json
+*.code-workspace
