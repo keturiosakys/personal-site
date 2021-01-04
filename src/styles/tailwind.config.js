@@ -9,9 +9,7 @@ module.exports = {
   theme: {
     colors: {
       theme: "var(--background-theme)",
-      blogEntry: "var(--background-blog-entry)",
       themeDark: "var(--dark-background-theme)",
-      blogEntryDark: "var(--dark-background-entry)",
       primary: "var(--color-primary)",
       secondary: "var(--color-secondary)",
       tertiary: "var(--color-tertiary)",

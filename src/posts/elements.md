@@ -28,18 +28,23 @@ tags:
 ### Unordered
 
 * Item 1
+
 * Item 2
 
   * Item 2a
+
   * Item 2b
 
 ### Ordered
 
 1. Item 1
+
 2. Item 2
+
 3. Item 3
 
    1. Item 3a
+
    2. Item 3b
 
 ## Links
@@ -52,9 +57,16 @@ You may be using [Markdown Live Preview](https://markdownlivepreview.com/).
 >
 > > Markdown is often used to format readme files, for writing messages in online discussion forums, and to create rich text using a plain text editor.
 
+Another quote with attribution:
+
+> Markdown is a lightweight markup language with plain-text-formatting syntax, created in 2004 by John Gruber with Aaron Swartz.
+>-- Jason Schmidle (2014)
+
 ## Inline code
 
-This web site[^1] is using `markedjs/marked`.
+<!-- TODO: fix inline syntax highlighting at some point -->
+
+This web site[^1] is using `markedjs/marked`. 
 
 [^1]: The above quote is excerpted from Rob Pike's [talk](https://www.youtube.com/watch?v=PAAkCSZUG1c) during Gopherfest, November 18, 2015.
 
