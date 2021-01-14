@@ -80,11 +80,19 @@
   }
 
   article ul {
-    @apply mb-4 ml-16 list-disc;
+    @apply list-disc;
+  }
+
+  article ul .article-unordered {
+    @apply mb-4 ml-16;
   }
 
   article ol {
-    @apply mb-4 ml-16 list-decimal;
+    @apply list-decimal;
+  }
+
+  article ol.article-ordered {
+    @apply mb-4 ml-16;
   }
 
   article a {

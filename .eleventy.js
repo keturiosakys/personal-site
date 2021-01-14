@@ -6,6 +6,7 @@ const embedTwitter    = require("eleventy-plugin-embed-twitter");
 const embedYouTube    = require('eleventy-plugin-youtube-embed');
 const embedSoundCloud = require("eleventy-plugin-embed-soundcloud");
 const pluginSEO       = require("eleventy-plugin-seo");
+const markdownItClass = require('@toycode/markdown-it-class');
 
 module.exports = function (eleventyConfig) {
 
@@ -28,12 +29,18 @@ module.exports = function (eleventyConfig) {
     figcaption: true
   }
 
+  let mapping = {
+    ul: 'article-unordered',
+    ol:'article-ordered'
+  }
+
   const markdownEngine = markdownIt(options);
   markdownEngine.use(markdownItImplicitFigure, figureOptions);
   markdownEngine.use(markdownItFootnotes);
   markdownEngine.use(blockEmbedPlugin);
   markdownEngine.use(markdownBackticks);
   markdownEngine.use(markdownMark);
+  markdownEngine.use(markdownItClass, mapping)
   eleventyConfig.setLibrary("md", markdownEngine);
 
   //favicon config
