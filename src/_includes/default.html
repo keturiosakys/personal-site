@@ -4,7 +4,8 @@
     {% include "./partials/head.html"%}
   </head>
   <body>
-    <div class="h-screen flex flex-col text-contentColor dark:text-contentColorDark bg-theme dark:bg-themeDark">
+  {# If scrolling/layout/overflow gets borked at some point: check this line for overscroll class #}
+    <div class="flex flex-col h-screen antialiased overscroll-none text-contentColor dark:text-contentColorDark bg-theme dark:bg-themeDark">
 
       {# Add header element #}
       {% include "./partials/header.html"%}

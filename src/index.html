@@ -5,8 +5,8 @@ path: home
 id: About
 ---
 
-<main class="flex-grow box-border mx-auto px-8 py-14 overflow-y-auto">
-  <div class="flex flex-col justify-content max-w-2xl text-contentColor dark:text-contentColorDark text-base">
+<main class="box-border flex-grow px-8 mx-auto overflow-y-auto py-14">
+  <div class="flex flex-col max-w-2xl text-base justify-content text-contentColor dark:text-contentColorDark">
     <div class="flex flex-col space-y-20">
       <div id="page-hero" class="justify-left ">
         <h3>Hey, I'm Laurynas</h3>
@@ -33,11 +33,29 @@ id: About
           </li> #}
         </ul>
       </div>
-      <div class="timeline flex flex-col w-full">
-        <div class="timeline-item flex mt-4 mb-12">
+      {# first timeline item #}
+      <div class="flex flex-col w-full mt-2 timeline">
+        <div class="flex mt-4 mb-12 timeline-item">
           <div class="flex flex-col items-center">
-            <div class="flex justify-center p-3 rounded-full align-center border-4 border-gray-50 dark:border-gray-1000 bg-gray-200 dark:bg-gray-800 bg-opacity-20"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg></div>
-            <div class="flex-1 w-px -mb-12 bg-gray-200 dark:mb-gray-800 timeline-line"></div>
+            <div class="flex justify-center p-3 bg-gray-200 border-4 rounded-full align-center border-gray-50 dark:border-gray-1000 dark:bg-gray-800 bg-opacity-20"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg></div>
+            <div class="timeline-line"></div>
+          </div>
+            <div class="flex flex-col flex-1 ml-4 space-y-4">
+              <div class="flex flex-col pt-1 contents-center">
+                <span class="font-medium">Product Owner at TNW</span>
+                <span class="text-sm text-colorSecondary">Managing a slew of websites and web apps.</span>
+              </div>
+            </div>
+          </div>
+          </div>
+        </div>
+      </div>
+      {# second timeline item #}
+      <div class="flex flex-col w-full mt-2 timeline">
+        <div class="flex mt-4 mb-12 timeline-item">
+          <div class="flex flex-col items-center">
+            <div class="flex justify-center p-3 bg-gray-200 border-4 rounded-full align-center border-gray-50 dark:border-gray-1000 dark:bg-gray-800 bg-opacity-20"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg></div>
+            <div class="timeline-line"></div>
             {# TODO: fix the line stroke color (currently picks up from main bg parameter) #}
           </div>
             <div class="flex flex-col flex-1 ml-4 space-y-4">

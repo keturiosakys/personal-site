@@ -57,7 +57,14 @@
     @apply mb-4;
   }
 
+  /* Timeline CSS */
+
+  .timeline-line {
+    @apply flex-1 w-px -mb-16 bg-secondary dark:bg-secondaryDark;
+  }
+
   /* Blog post CSS */
+  /* ---------------------------------------------------- */
 
   article h1 {
     @apply mb-6 text-2xl font-bold lg:text-3xl;
@@ -130,8 +137,11 @@
   article .embed {
     @apply mb-4;
   }
+  /* ---------------------------------------------------- */
 
 }
+
+
 
 @layer utilities {
   .active {
