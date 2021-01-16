@@ -9,7 +9,7 @@
   --background-theme: #f5f5f5;
   --color-primary: rgba(0, 0, 0, 0.88);
   --color-secondary: rgba(0, 0, 0, 0.65);
-  --color-tertiary: rgba(0, 0, 0, 0.20);
+  --color-tertiary: rgba(0, 0, 0, 0.40);
   --color-content: rgba(0, 0, 0, 0.88);
   --color-accent: #336633;
   --color-marker: #FFCC66CC;
@@ -17,7 +17,7 @@
   --dark-background-theme: #0b1901;
   --dark-color-primary: rgba(255, 255, 255, 0.88);
   --dark-color-secondary: rgba(255, 255, 255, 0.65);
-  --dark-color-tertiary: rgba(255, 255, 255, 0.20);
+  --dark-color-tertiary: rgba(255, 255, 255, 0.40);
   --dark-color-content: rgba(255, 255, 255, 0.88);
   --dark-color-accent: #669966;
   --dark-color-marker: #664400CC;

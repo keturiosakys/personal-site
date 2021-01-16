@@ -29,6 +29,8 @@ module.exports = function (eleventyConfig) {
     figcaption: true
   }
 
+  // Adding class to in-article lists so they can be styled
+
   let mapping = {
     ul: 'article-unordered',
     ol:'article-ordered'

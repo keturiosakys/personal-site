@@ -25,45 +25,10 @@ id: About
               <svg class="inline-block w-7 h-7" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>
             </a>
           </li>
-          {# Github icon #}
-          {# <li class="hover:text-colorAccent dark:hover:text-colorAccentDark">
-            <a href="https://github.com/keturiosakys">
-              <svg class="inline-block w-7 h-7" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"></path></svg>
-            </a>
-          </li> #}
         </ul>
       </div>
-      {# Timeline starts ⬇️#}
-      <div class="flex flex-col w-full mt-2 timeline">
-      {# first time line item #}
-        <div class="flex mt-4 mb-12 timeline-item">
-          <div class="flex flex-col items-center">
-            <div class="flex justify-center p-3 border-2 rounded-full align-center dark:bg-colorAccentDark dark:border-colorAccentDark"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg></div>
-            <div class="timeline-line"></div>
-          </div>
-          <div class="flex flex-col flex-1 ml-4 space-y-4">
-            <div class="flex flex-col pt-1 contents-center">
-                <span class="font-medium">Product Owner at TNW</span>
-                <span class="text-sm text-colorSecondary">Tempus et senectus malesuada magnis lacinia adipiscing tristique dictum consectetur nunc felis nec dis sollicitudin. Conubia sem lorem ad leo accumsan lobortis tortor non commodo blandit nullam rutrum mi suscipit</span>
-            </div>
-          </div>
-        </div>
-      {# second timeline item #}
-      <div class="flex mt-4 mb-12 timeline-item">
-                <div class="flex flex-col items-center">
-                  <div class="flex justify-center p-3 border-2 rounded-full align-center dark:bg-colorAccentDark dark:border-colorAccentDark"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg></div>
-                  <div class="timeline-line"></div>
-                </div>
-                <div class="flex flex-col flex-1 ml-4 space-y-4">
-                  <div class="flex flex-col pt-1 contents-center">
-                      <span class="font-medium">Product Owner at TNW</span>
-                      <span class="text-sm text-colorSecondary">Tempus et senectus malesuada magnis lacinia adipiscing tristique dictum consectetur nunc felis nec dis sollicitudin. Conubia sem lorem ad leo accumsan lobortis tortor non commodo blandit nullam rutrum mi suscipit</span>
-                  </div>
-                </div>
-              </div>
-      </div>
-      {# Time line ends ⬆️ #}
+        {# TODO: "componentize" the timeline so I can: 1) add data easily, 2) pre-select icon based on experience type, 3) remove timeline-line on the last item  #}
+        {% include "partials/timeline.html" -%}
       </div>
     </div>
-  </div>
 </main>
