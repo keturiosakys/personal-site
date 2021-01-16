@@ -10,3 +10,4 @@ TODO
 *.code-workspace
 *.sublime-project
 *.sublime-workspace
+src/posts/elements.md
