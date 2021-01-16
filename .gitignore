@@ -8,3 +8,4 @@ package-lock.json
 TODO
 .prettierrc.json
 *.code-workspace
+*.sublime-project

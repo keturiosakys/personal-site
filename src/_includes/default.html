@@ -3,9 +3,9 @@
   <head>
     {% include "./partials/head.html"%}
   </head>
-  <body>
+  <body class="bg-theme dark:bg-themeDark">
   {# If scrolling/layout/overflow gets borked at some point: check this line for overscroll class #}
-    <div class="flex flex-col h-screen antialiased overscroll-none text-contentColor dark:text-contentColorDark bg-theme dark:bg-themeDark">
+    <div class="flex flex-col h-screen antialiased text-contentColor dark:text-contentColorDark">
 
       {# Add header element #}
       {% include "./partials/header.html"%}
@@ -18,6 +18,10 @@
 
       {# Add scripts #}
       <script src="/js/alpine.js?v={% version %}"></script>
+      <script>
+        console.log("Eleventy-Tailwind-Alpine starter kit from Greg Wolanski (gregwolanski.com)")
+        console.log("Timeline component straight up swiped from Brian Lovin (brianlovin.com)")
+      </script>
 
     </div>
   </body>

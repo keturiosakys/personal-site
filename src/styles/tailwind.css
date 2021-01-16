@@ -60,7 +60,7 @@
   /* Timeline CSS */
 
   .timeline-line {
-    @apply flex-1 w-px -mb-16 bg-secondary dark:bg-secondaryDark;
+    @apply flex-1 w-0.5 mt-2 -mb-12 bg-secondary dark:bg-secondaryDark;
   }
 
   /* Blog post CSS */

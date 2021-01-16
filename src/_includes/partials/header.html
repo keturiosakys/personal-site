@@ -1,4 +1,5 @@
-<header id="header" class="z-10 flex items-center justify-between w-full h-16 max-w-5xl px-8 mx-auto bg-transparent">
+<header id="header" class="z-10 w-full h-16 px-8 pt-4 fixed bg-theme dark:bg-themeDark">
+  <div class="flex items-center justify-between max-w-5xl mx-auto">
     <div class="flex pr-6 font-bold hover:text-colorAccent dark:hover:text-colorAccentDark"> <a href="/">Laurynas Keturakis</a></div>
     {% if navigation.items %}
     <ul
@@ -17,4 +18,5 @@
       {% endfor %}
     </ul>
     {% endif %}
+  </div>
 </header>
