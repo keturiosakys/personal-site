@@ -1,22 +1,23 @@
-const htmlmin = require("html-minifier");
-const yaml = require("js-yaml");
-const { DateTime } = require("luxon");
+const htmlmin         = require("html-minifier");
+const yaml            = require("js-yaml");
+const { DateTime }    = require("luxon");
 const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
-const embedTwitter = require("eleventy-plugin-embed-twitter");
-const embedYouTube = require('eleventy-plugin-youtube-embed');
+const embedTwitter    = require("eleventy-plugin-embed-twitter");
+const embedYouTube    = require('eleventy-plugin-youtube-embed');
 const embedSoundCloud = require("eleventy-plugin-embed-soundcloud");
-const pluginSEO = require("eleventy-plugin-seo");
+const pluginSEO       = require("eleventy-plugin-seo");
+const markdownItClass = require('@toycode/markdown-it-class');
 
 module.exports = function (eleventyConfig) {
 
   // markdown engine config
-  let markdownIt = require("markdown-it");
+  let markdownIt               = require("markdown-it");
   let markdownItImplicitFigure = require("markdown-it-implicit-figures");
-  let markdownItFootnotes = require("@gerhobbelt/markdown-it-footnote");
-  let blockEmbedPlugin = require("markdown-it-block-embed");
-  let markdownBackticks = require("markdown-it-prism-backticks");
-  let markdownMark = require('markdown-it-mark');
-  let markdownAttribution = require('markdown-it-attribution');
+  let markdownItFootnotes      = require("@gerhobbelt/markdown-it-footnote");
+  let blockEmbedPlugin         = require("markdown-it-block-embed");
+  let markdownBackticks        = require("markdown-it-prism-backticks");
+  let markdownMark             = require('markdown-it-mark');
+  let markdownAttribution      = require('markdown-it-attribution');
 
   let options = {
     html: true,
@@ -28,24 +29,32 @@ module.exports = function (eleventyConfig) {
     figcaption: true
   }
 
+  // Adding class to in-article lists so they can be styled
+
+  let mapping = {
+    ul: 'article-unordered',
+    ol:'article-ordered'
+  }
+
   const markdownEngine = markdownIt(options);
   markdownEngine.use(markdownItImplicitFigure, figureOptions);
   markdownEngine.use(markdownItFootnotes);
   markdownEngine.use(blockEmbedPlugin);
   markdownEngine.use(markdownBackticks);
   markdownEngine.use(markdownMark);
+  markdownEngine.use(markdownItClass, mapping)
   eleventyConfig.setLibrary("md", markdownEngine);
 
   //favicon config
 
   let env = process.env.ELEVENTY_ENV;
 
-  if (env === "prod") {
+      if (env      === "prod") {
       eleventyConfig.addPassthroughCopy({ "./src/_includes/favicon/prod": "/" });
-  }
-  else if (env === "dev") {
+      }
+      else if (env === "dev") {
       eleventyConfig.addPassthroughCopy({ "./src/_includes/favicon/dev": "/" });
-  }
+      }
 
   // .ignore settings
   eleventyConfig.setUseGitIgnore(false);
@@ -81,18 +90,18 @@ module.exports = function (eleventyConfig) {
   // Embeds
   eleventyConfig.addPlugin(embedTwitter);
   eleventyConfig.addPlugin(embedYouTube, {
-          lite: true,
-          embedClass: 'embed youtube'
+    lite: true,
+    embedClass: 'embed youtube'
       });
   eleventyConfig.addPlugin(embedSoundCloud, {
-          small: true,
-          embedClass: 'embed soundcloud'
+    small: true,
+    embedClass: 'embed soundcloud'
   });
 
   //Support for YAML in _data
-  eleventyConfig.addDataExtension("yaml", (contents) =>
+    eleventyConfig.addDataExtension("yaml", (contents) =>
     yaml.safeLoad(contents)
-  );
+    );
 
   // Convert to human readable date
   eleventyConfig.addFilter("readableDate", (dateObj) => {

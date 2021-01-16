@@ -4,21 +4,25 @@ title: Posts
 permalink: "/posts/index.html"
 id: Posts
 ---
+<div class="flex flex-col space-y-10">
+
 {# Hero object #}
-<div id="page-hero" class="mb-12 justify-left text-contentColor dark:text-contentColorDark">
-  <h3>{{title}}</h3>
+<div id="page-hero" class="justify-left text-contentColor dark:text-contentColorDark">
   <p>I'm writing about my recent interests, and odd obsessions. I will also put any side project updates here.</p>
 </div>
 
+<hr>
 {# Article list #}
 
 <div id="article-list">
 	{% for post in collections.publish | reverse %} {#for loop to iterate through the collection creating items for each#}
-	  <a id="article-link" href="{{ post.url | url }}">
-	    <div id="article" class="relative block rounded-md cursor-pointer p-7 mb-7 bg-blogEntry dark:bg-blogEntryDark">
+	  <a id="article-link" href="{{ post.url | url }}" class="hover:text-colorAccent dark:hover:text-colorAccentDark">
+	    <div id="article" class="relative block rounded-md cursor-pointer mb-7 bg-blogEntry dark:bg-blogEntryDark">
 	      <div id="article-date" class="mb-2">{{ post.date | readableDate }}</div>
 	      <div id="article-title"><h3>{{ post.data.title }}</h3></div>
 	    </div>
 	  </a>
 	{% endfor %}
+</div>
+
 </div>
