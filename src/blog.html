@@ -16,7 +16,7 @@ id: Posts
 
 <div id="article-list">
 	{% for post in collections.publish | reverse %} {#for loop to iterate through the collection creating items for each#}
-	  <a id="article-link" href="{{ post.url | url }}">
+	  <a id="article-link" href="{{ post.url | url }}" class="hover:text-colorAccent dark:hover:text-colorAccentDark">
 	    <div id="article" class="relative block rounded-md cursor-pointer mb-7 bg-blogEntry dark:bg-blogEntryDark">
 	      <div id="article-date" class="mb-2">{{ post.date | readableDate }}</div>
 	      <div id="article-title"><h3>{{ post.data.title }}</h3></div>
