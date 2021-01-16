@@ -42,13 +42,10 @@
     @apply mb-4;
   }
 
-  html {
-      overflow: hidden;
-      height: 100%;
-  }
 
-  body {
-      overflow: auto;
+
+  hr {
+    @apply border-secondary dark:border-secondaryDark;
   }
 
   /* Hero CSS */
@@ -63,7 +60,7 @@
     @apply flex-1 w-0.5 mt-2 -mb-12 bg-secondary dark:bg-secondaryDark;
   }
 
-  /* Blog post CSS */
+  /* Article CSS */
   /* ---------------------------------------------------- */
 
   article h1 {

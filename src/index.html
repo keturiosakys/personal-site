@@ -5,9 +5,9 @@ path: home
 id: About
 ---
 
-<main class="mt-20 box-border flex-grow px-8 mx-auto py-14">
-  <div class="flex flex-col max-w-2xl text-base justify-content text-contentColor dark:text-contentColorDark">
-    <div class="flex flex-col space-y-20">
+<main class="box-border flex-grow block w-10/12 max-w-2xl mx-auto my-20 py-14">
+  <div class="flex flex-col text-base justify-content text-contentColor dark:text-contentColorDark">
+    <div class="flex flex-col space-y-10">
       <div id="page-hero" class="justify-left ">
         <h3>Hey, I'm Laurynas</h3>
         <p>I write words, experiment with code and study people and their ideas.</p>
@@ -27,7 +27,7 @@ id: About
           </li>
         </ul>
       </div>
-        {# TODO: "componentize" the timeline so I can: 1) add data easily, 2) pre-select icon based on experience type, 3) remove timeline-line on the last item  #}
+      <hr>
         {% include "partials/timeline.html" -%}
       </div>
     </div>
