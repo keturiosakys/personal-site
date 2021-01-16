@@ -9,3 +9,4 @@ TODO
 .prettierrc.json
 *.code-workspace
 *.sublime-project
+*.sublime-workspace
