@@ -1,3 +1,4 @@
+{% block head %}
 <title>{{title}}</title>
 <meta charset="UTF-8" />
 <meta http-equiv="x-ua-compatible" content="ie=edge" />
@@ -5,6 +6,7 @@
 {% if description %}
 <meta name="description" content="{{description}}" />
 {% endif %}
+<script data-host="https://microanalytics.io" data-dnt="false" src="https://microanalytics.io/js/script.js" id="ZwSg9rf6GA" async defer></script>
 <meta http-equiv="x-ua-compatible" content="ie=edge" />
 <meta
   name="viewport"
@@ -18,4 +20,4 @@
 {# CSS #}
 <link href="/css/prism-nord.css" rel="stylesheet">
 <link rel="stylesheet" href="/css/style.css?v={% version %}" />
-{% block head %}{% endblock %}
+{% endblock %}
