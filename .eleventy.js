@@ -13,7 +13,7 @@ module.exports = function (eleventyConfig) {
   // markdown engine config
   let markdownIt               = require("markdown-it");
   let markdownItImplicitFigure = require("markdown-it-implicit-figures");
-  let markdownItFootnotes      = require("@gerhobbelt/markdown-it-footnote");
+  // let markdownItFootnotes      = require("@gerhobbelt/markdown-it-footnote"); TODO: something's wrong with the module - have a look at it the next time when you need a footnote
   let blockEmbedPlugin         = require("markdown-it-block-embed");
   let markdownBackticks        = require("markdown-it-prism-backticks");
   let markdownMark             = require('markdown-it-mark');
@@ -38,7 +38,7 @@ module.exports = function (eleventyConfig) {
 
   const markdownEngine = markdownIt(options);
   markdownEngine.use(markdownItImplicitFigure, figureOptions);
-  markdownEngine.use(markdownItFootnotes);
+  // markdownEngine.use(markdownItFootnotes);
   markdownEngine.use(blockEmbedPlugin);
   markdownEngine.use(markdownBackticks);
   markdownEngine.use(markdownMark);
