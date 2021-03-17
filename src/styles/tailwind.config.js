@@ -1,5 +1,4 @@
 module.exports = {
-  darkMode: "false",
   purge: {
     content: ["_site/**/*.html"],
     options: {

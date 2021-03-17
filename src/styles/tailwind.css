@@ -42,7 +42,7 @@
   }
 
   hr {
-    @apply border-secondary dark:border-secondaryDark;
+    @apply border-secondary;
   }
 
   /* Hero CSS */
@@ -54,7 +54,7 @@
   /* Timeline CSS */
 
   .timeline-line {
-    @apply flex-1 w-0.5 mt-2 -mb-12 bg-secondary dark:bg-secondaryDark;
+    @apply flex-1 w-0.5 mt-2 -mb-12 bg-secondary;
   }
 
   /* Article CSS */
@@ -97,7 +97,7 @@
   }
 
   article a {
-    @apply text-colorAccent dark:text-colorAccentDark;
+    @apply text-colorAccent;
   }
 
   article a:hover {
@@ -105,15 +105,15 @@
   }
 
   article a:visited {
-    @apply text-tertiary dark:text-tertiaryDark;
+    @apply text-tertiary;
   }
 
   article blockquote {
-    @apply px-6 my-6 italic text-secondary dark:text-secondaryDark;
+    @apply px-6 my-6 italic text-secondary;
   }
 
   article hr {
-    @apply mb-4 border-t-2 border-secondary dark:border-secondaryDark;
+    @apply mb-4 border-t-2 border-secondary;
   }
 
   article img {
@@ -125,7 +125,7 @@
   }
 
   article mark {
-    @apply bg-colorMarker dark:bg-colorMarkerDark text-contentColor dark:text-contentColorDark;
+    @apply bg-colorMarker text-contentColor;
   }
 
   article .embed {
@@ -136,6 +136,6 @@
 
 @layer utilities {
   .active {
-    @apply pb-1.5 font-bold border-b-2 border-solid border-contentColor dark:border-contentColorDark;
+    @apply pb-1.5 font-bold border-b-2 border-solid border-contentColor;
   }
 }
