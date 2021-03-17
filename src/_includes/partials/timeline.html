@@ -1,31 +1,31 @@
 {# Timeline starts ↓ #}
 <div class="flex flex-col w-full timeline">
-{% for item in timeline.items %}
+  {% for item in timeline.items %}
   <div class="flex mt-4 mb-12 timeline-item">
     <div class="flex flex-col items-center">
-      <div class="flex justify-center p-3 border-2 rounded-full align-center border-colorAccent dark:bg-colorAccentDark dark:border-colorAccentDark">
-      {# For some reason the switch statement doesn't work so I'm stuck with ifs for now #}
-      {% if item.type == "university" %}
-        {% include "./icons/university-cap.html"%}
-      {% else %}
-        {% include "./icons/briefcase.html"%}
-      {% endif %}
+      <div
+        class="flex justify-center p-3 border-2 rounded-full align-center border-colorAccent"
+      >
+        {# For some reason the switch statement doesn't work so I'm stuck with
+        ifs for now #} {% if item.type == "university" %} {% include
+        "./icons/university-cap.html"%} {% else %} {% include
+        "./icons/briefcase.html"%} {% endif %}
       </div>
-      {# Make sure the tracing line is added for all items except the last one #}
-      {% if loop.last == false %}
+      {# Make sure the tracing line is added for all items except the last one
+      #} {% if loop.last == false %}
       <div class="timeline-line"></div>
       {% endif %}
     </div>
     <div class="flex flex-col flex-1 ml-4 space-y-4">
       <div class="flex flex-col pt-1 contents-center">
-          <span class="font-medium">{{ item.title }}</span>
-          <span class="text-sm text-secondary dark:text-secondaryDark">{{ item.duration }}</span>
-          <div class="flex flex-col mt-4 space-y-4">
-            <span class="text-sm text-primary dark:text-primaryDark">{{ item.description }}</span>
-          </div>
+        <span class="font-medium">{{ item.title }}</span>
+        <span class="text-sm text-secondary">{{ item.duration }}</span>
+        <div class="flex flex-col mt-4 space-y-4">
+          <span class="text-sm text-primary">{{ item.description }}</span>
+        </div>
       </div>
     </div>
   </div>
-{% endfor %}
+  {% endfor %}
 </div>
 {# Time line ends ↑ #}

@@ -4,25 +4,38 @@ title: Posts
 permalink: "/posts/index.html"
 id: Posts
 ---
+
 <div class="flex flex-col space-y-10">
+    {# Hero object #}
+    <div id="page-hero" class="justify-left text-contentColor">
+        <p>
+            I'm writing about my recent interests, long-held beliefs, and odd
+            obsessions. If I have any side project updates, I will also put them
+            here.
+        </p>
+    </div>
 
-{# Hero object #}
-<div id="page-hero" class="justify-left text-contentColor dark:text-contentColorDark">
-  <p>I'm writing about my recent interests, long-held beliefs, and odd obsessions. If I have any side project updates, I will also put them here.</p>
-</div>
+    <hr />
+    {# Article list #}
 
-<hr>
-{# Article list #}
-
-<div id="article-list">
-	{% for post in collections.publish | reverse %} {#for loop to iterate through the collection creating items for each#}
-	  <a id="article-link" href="{{ post.url | url }}" class="hover:text-colorAccent dark:hover:text-colorAccentDark">
-	    <div id="article" class="relative block rounded-md cursor-pointer mb-7 bg-blogEntry dark:bg-blogEntryDark">
-	      <div id="article-date" class="mb-2">{{ post.date | readableDate }}</div>
-	      <div id="article-title"><h3>{{ post.data.title }}</h3></div>
-	    </div>
-	  </a>
-	{% endfor %}
-</div>
-
+    <div id="article-list">
+        {% for post in collections.publish | reverse %} {#for loop to iterate
+        through the collection creating items for each#}
+        <a
+            id="article-link"
+            href="{{ post.url | url }}"
+            class="hover:text-colorAccent"
+        >
+            <div
+                id="article"
+                class="relative block rounded-md cursor-pointer mb-7 bg-blogEntry"
+            >
+                <div id="article-date" class="mb-2">
+                    {{ post.date | readableDate }}
+                </div>
+                <div id="article-title"><h3>{{ post.data.title }}</h3></div>
+            </div>
+        </a>
+        {% endfor %}
+    </div>
 </div>
