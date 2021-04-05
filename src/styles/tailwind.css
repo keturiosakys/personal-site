@@ -96,15 +96,15 @@
     @apply mb-4 ml-16;
   }
 
-  article a {
+  a {
     @apply text-colorAccent;
   }
 
-  article a:hover {
+  a:hover {
     @apply underline;
   }
 
-  article a:visited {
+  a:visited {
     @apply text-tertiary;
   }
 
