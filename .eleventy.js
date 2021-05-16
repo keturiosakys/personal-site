@@ -45,6 +45,9 @@ module.exports = function (eleventyConfig) {
   markdownEngine.use(markdownItClass, mapping)
   eleventyConfig.setLibrary("md", markdownEngine);
 
+  // Resume pdf passthrough
+  eleventyConfig.addPassthroughCopy("./src/resume.pdf");
+
   //favicon config
 
   let env = process.env.ELEVENTY_ENV;
